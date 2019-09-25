@@ -10,12 +10,12 @@ wait = WebDriverWait(driver, 10)
 driver.get('https://gmail.com')
 
 # fill and submit username
-driver.find_element_by_css_selector('#identifierId').send_keys('raoni.demarchi.iv2@gmail.com')
+driver.find_element_by_css_selector('#identifierId').send_keys('')
 driver.find_element_by_css_selector('#identifierNext').click()
 
 # fill and submit password
 wait.until(expected_conditions.element_to_be_clickable((By.CSS_SELECTOR, '#password input')))
-driver.find_element_by_css_selector('#password input').send_keys('r15210986')
+driver.find_element_by_css_selector('#password input').send_keys('')
 
 wait.until(expected_conditions.element_to_be_clickable((By.CSS_SELECTOR, '#passwordNext')))
 driver.find_element_by_css_selector('#passwordNext').click()
